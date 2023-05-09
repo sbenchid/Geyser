@@ -677,7 +677,7 @@ public class GeyserSession implements GeyserConnection, GeyserCommandSource {
             geyser.getLogger().severe(GeyserLocale.getLocaleStringLog("geyser.auth.already_loggedin", username));
             return;
         }
-
+        username = username.replace(" ","_");
         loggingIn = true;
 
         // Use a future to prevent timeouts as all the authentication is handled sync
